@@ -1,0 +1,17 @@
+<!--success.vtl-->
+<h1>Travel Tracker</h1>
+#if ($travels)
+<h2>Here's your travel locations</h2>
+  <ul>
+    #foreach ($travel in $travels)
+      <li>Location: $travel.getLocation()</li>
+      <li>Description: $travel.getDescription()</li>
+      <li>***********************</li>
+    #end
+  </ul>
+#else
+  <p>No locations added!</p>
+#end
+
+<p>To add more travels <a href="/">Go Back</a></p>
+<!--success.vtl-->
